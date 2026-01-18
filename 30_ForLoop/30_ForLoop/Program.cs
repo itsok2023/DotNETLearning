@@ -7,7 +7,7 @@ namespace _30_ForLoop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("For Loop Example");
+            Console.WriteLine("For Loop Example : ");
 
             for (int value = 1; value <= 10; value++)
             {
