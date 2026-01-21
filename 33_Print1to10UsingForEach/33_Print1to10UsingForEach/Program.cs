@@ -10,12 +10,14 @@ namespace _33_Print1to10UsingForEach
     {
         static void Main(string[] args)
         {
-            object[] number = { 1, "Omkar", 3, 4, 5, 6, 7, 8, 9, 10 };
+            Console.WriteLine(DateTime.Now);
+            object[] number = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
             foreach (var num in number)
             {
                 Console.WriteLine(num);
             }
+            Console.WriteLine(DateTime.Now);
         }
     }
 }
