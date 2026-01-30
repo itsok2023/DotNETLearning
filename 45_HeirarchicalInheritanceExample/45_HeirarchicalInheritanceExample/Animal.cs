@@ -14,7 +14,7 @@ namespace _45_HeirarchicalInheritanceExample
         }
     }
 
-    public class Cat:Animal
+    internal class Cat:Animal
     {
         public void CatSound()
         {
