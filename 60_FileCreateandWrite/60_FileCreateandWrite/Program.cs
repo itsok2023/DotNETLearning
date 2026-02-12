@@ -11,19 +11,28 @@ namespace _60_FileCreateandWrite
     {
         static void Main(string[] args)
         {
-            //string path = @"C:\ok\name.txt";
-            string des = @"C:\notok\name.txt";
+            // Copy File
+            Directory.CreateDirectory(@"C:\ok");
+            Directory.CreateDirectory(@"C:\notok");
+            string path = @"C:\ok\a.txt";
+            File.WriteAllText(path, "Hello World");
+            File.Copy(path, @"C:\notok\a.txt", true);
 
-            //string[] lines = { "Omkar", "Prathamesh", "Saurabh" };
+            // Move File
+            File.WriteAllText(@"C:\ok\b.txt", "Moving File");
+            File.Move(@"C:\ok\b.txt", @"C:\notok\b.txt");
 
-            //File.AppendAllLines(path, lines);
 
-            FileInfo info = new FileInfo(@"C:\ok\name.txt");
-            Console.WriteLine(info.Length);
+            //Append Lines
+            File.WriteAllText(@"C:\ok\c.txt", "File for Append");
+            string[] names = { "OK", "NOTOK", "ALWAYSOK" };
+            File.AppendAllLines(@"C:\ok\c.txt", names);
 
-            File.Copy(info.FullName, des, true);
-            File.Move
-            Console.ReadLine();
+            //Size of file
+            FileInfo cfile = new FileInfo(@"C:\ok\c.txt");
+            Console.WriteLine(cfile.Length + " bytes");
+
+            Console.Read();
         }
     }
 }
